@@ -1,0 +1,308 @@
+:root {
+  --primary-red: #d32f2f;
+  --dark-red: #b71c1c;
+  --light-bg: rgba(255, 0, 0, 0.144);
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  background-color: #f8f9fa;
+}
+
+header {
+  background-color: var(--primary-red);
+}
+
+#headerInner img {
+  cursor: pointer;
+}
+
+#banner {
+  background-color: var(--light-bg);
+}
+
+#el1,
+#el2,
+#el3,
+#el4 {
+  border-bottom: 2px solid rgba(255, 0, 0, 0.301);
+  line-height: 0.7;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+#el1.active,
+#el2.active,
+#el3.active,
+#el4.active {
+  border-bottom: 2px solid var(--dark-red) !important;
+}
+
+#el1:hover,
+#el2:hover,
+#el3:hover,
+#el4:hover {
+  border-bottom: 2px solid var(--primary-red);
+}
+
+#immediate {
+  background-color: var(--light-bg);
+}
+
+#immediate-section,
+#shipment-Info {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Button styles with transitions */
+#avoid-shipping,
+#new-Delivery,
+#return,
+#complete-delivery,
+#confirm-return,
+.btn-custom {
+  background-color: var(--primary-red);
+  transition: all 0.3s ease;
+  color: white;
+  font-weight: 900;
+  border: 2px solid var(--primary-red);
+}
+
+#avoid-shipping:hover,
+#new-Delivery:hover,
+#return:hover,
+#complete-delivery:hover,
+#confirm-return:hover,
+.btn-custom:hover {
+  background-color: white;
+  color: var(--primary-red);
+  border-color: var(--primary-red);
+}
+
+#fot-div1,
+#fot-div2 {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.226);
+  font-size: 12px;
+}
+
+.hr {
+  border-bottom: 3px solid var(--primary-red);
+}
+
+span,
+del {
+  font-size: 12px;
+}
+
+h5 b {
+  font-weight: 900;
+}
+
+#note-text {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* Initial hidden state */
+.d-none {
+  display: none;
+}
+
+/* Animation for hiding the button */
+.slide-out-right {
+  animation: slideOutRight 0.5s forwards;
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Animation for showing shipment info */
+.slide-in-left {
+  animation: slideInLeft 0.5s forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Modal styles with zoom animation */
+.modal {
+  animation: zoomIn 0.3s ease-out;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-content {
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+}
+
+.modal-header {
+  background-color: var(--primary-red);
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.modal-header .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.modal-body {
+  padding: 25px;
+}
+
+.time-btn,
+.date-btn,
+.return-btn {
+  background-color: var(--primary-red);
+  color: white;
+  font-weight: 800;
+  padding: 12px;
+  margin: 8px 0;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.time-btn:hover,
+.date-btn:hover,
+.return-btn:hover {
+  background-color: white;
+  color: var(--primary-red);
+  border: 2px solid var(--primary-red);
+}
+
+.date-btn {
+  animation: zoomIn 0.5s forwards;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.note-text,
+.return-note {
+  color: var(--primary-red);
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+#delivery-confirmation {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+  height: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.progress-bar {
+  background-color: var(--primary-red);
+  transition: width 0.5s ease;
+}
+
+/* Loading modal specific styles */
+.loading-modal .modal-header {
+  justify-content: flex-start;
+}
+
+.loading-modal .modal-content {
+  border-top: 5px solid var(--primary-red);
+}
+
+@media (max-width: 768px) {
+  #logo-Img {
+    max-width: 110px;
+  }
+  #banner img {
+    max-width: 100%;
+    height: auto;
+  }
+  #el1,
+  #el2,
+  #el3,
+  #el4 {
+    font-size: 8px;
+    padding: 0px 3px !important;
+  }
+  .modal-body {
+    padding: 15px;
+  }
+}
+
+#iphone-img {
+  max-width: 150px;
+  height: 150px;
+}
+
+/* Ensure all elements within modals use the same font family */
+.modal,
+.modal *,
+.modal-content,
+.modal-header,
+.modal-body,
+.modal-title,
+.modal-footer,
+.time-btn,
+.date-btn,
+.note-text,
+.progress-bar {
+  font-family: "Kanit", sans-serif;
+}
+
+/* Return Modal Specific Styles */
+.return-modal-header {
+  background-color: var(--primary-red);
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 15px;
+}
+
+.return-modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+.return-btn {
+  width: 80%;
+}
